@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    row-gap: 20px;
+}
+
+img {
+    height: 230px;
+    margin: 10px auto; 
+    display: block;
+}
+
+.desc{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.name{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.image-container,
+.image-container2,
+.image-container3,
+.image-container4,
+.image-container5 {
+    background-color: inherit; 
+    border: 3px solid;
+    border-radius: 8px;
+    padding: 5px;
+    color: white;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+.image-container {
+    background-color: blue;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image-container2 {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.image-container3 {
+    background-color: orange;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-container4 {
+    background-color: purple;
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image-container5 {
+    background-color: brown;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-container {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+
+    .image-container2 {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+    }
+
+    .image-container3 {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .image-container4 {
+        grid-column: 1 / span 1;
+        grid-row: 3;
+    }
+
+    .image-container5 {
+        grid-column: 2 / span 1;
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-container,
+    .image-container2,
+    .image-container3,
+    .image-container4,
+    .image-container5 {
+        grid-column: 1 / span 1;
+        grid-row: auto;
+    }
+}
